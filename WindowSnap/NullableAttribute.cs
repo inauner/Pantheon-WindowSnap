@@ -27,5 +27,24 @@ namespace System.Runtime.CompilerServices
             NullableFlags = value;
         }
     }
+
+    /// <summary>
+    /// Reserved for use by a compiler for tracking metadata.
+    /// This attribute should not be used by developers in source code.
+    /// </summary>
+    //[EditorBrowsable(EditorBrowsableState.Never)]
+    [AttributeUsage(AttributeTargets.Module | AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Parameter | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter, Inherited = false)]
+    public sealed class NullableContextAttribute : Attribute
+    {
+        /// <summary>Indicates whether the nullable annotation context is enabled.</summary>
+        public readonly byte Flag;
+
+        /// <summary>Initializes the attribute.</summary>
+        /// <param name="flag">The flag value.</param>
+        public NullableContextAttribute(byte flag)
+        {
+            Flag = flag;
+        }
+    }
 }
 #endif
