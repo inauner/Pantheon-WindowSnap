@@ -1,3 +1,7 @@
+This mod allows for window resizing and movement using windows native windows features such as win+arrow key.
+
+
+below is from modtemplate readme:
 ## ModsOfPantheon mod template
 This is the minimum solution for creating a mod for Pantheon: Rise of the Fallen. This serves as a starting point for those wanting to learn to create mods.
 This solution uses .NET 6, which is required for modding Unity games.
